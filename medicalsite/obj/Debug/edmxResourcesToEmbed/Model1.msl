@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MedicalDBModelStoreContainer" CdmEntityContainer="MedicalDBEntities">
+    <EntitySetMapping Name="Chabter1_Tbl">
+      <EntityTypeMapping TypeName="MedicalDBModel.Chabter1_Tbl">
+        <MappingFragment StoreEntitySet="Chabter1_Tbl">
+          <ScalarProperty Name="link_data" ColumnName="link_data" />
+          <ScalarProperty Name="SectionDescription" ColumnName="SectionDescription" />
+          <ScalarProperty Name="CodeRange_To" ColumnName="CodeRange_To" />
+          <ScalarProperty Name="CodeRange_from" ColumnName="CodeRange_from" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Diseases_destails_tbl">
+      <EntityTypeMapping TypeName="MedicalDBModel.Diseases_destails_tbl">
+        <MappingFragment StoreEntitySet="Diseases_destails_tbl">
+          <ScalarProperty Name="Diseases_fk" ColumnName="Diseases_fk" />
+          <ScalarProperty Name="Link_data" ColumnName="Link_data" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Diseases_Tbl">
+      <EntityTypeMapping TypeName="MedicalDBModel.Diseases_Tbl">
+        <MappingFragment StoreEntitySet="Diseases_Tbl">
+          <ScalarProperty Name="Section_Fk" ColumnName="Section_Fk" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dises_Description_tbl">
+      <EntityTypeMapping TypeName="MedicalDBModel.dises_Description_tbl">
+        <MappingFragment StoreEntitySet="dises_Description_tbl">
+          <ScalarProperty Name="ICD9Codes" ColumnName="ICD9Codes" />
+          <ScalarProperty Name="MeSH_Codes" ColumnName="MeSH_Codes" />
+          <ScalarProperty Name="Specialty" ColumnName="Specialty" />
+          <ScalarProperty Name="img" ColumnName="img" />
+          <ScalarProperty Name="details_fk" ColumnName="details_fk" />
+          <ScalarProperty Name="code_dec" ColumnName="code_dec" />
+          <ScalarProperty Name="Descraption" ColumnName="Descraption" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notes_Tbl">
+      <EntityTypeMapping TypeName="MedicalDBModel.Notes_Tbl">
+        <MappingFragment StoreEntitySet="Notes_Tbl">
+          <ScalarProperty Name="Fk_type" ColumnName="Fk_type" />
+          <ScalarProperty Name="Table_FK" ColumnName="Table_FK" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Section_Tbl">
+      <EntityTypeMapping TypeName="MedicalDBModel.Section_Tbl">
+        <MappingFragment StoreEntitySet="Section_Tbl">
+          <ScalarProperty Name="link_data" ColumnName="link_data" />
+          <ScalarProperty Name="Chabter1_fk" ColumnName="Chabter1_fk" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code_from" ColumnName="Code_from" />
+          <ScalarProperty Name="Code_to" ColumnName="Code_to" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="MedicalDBModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

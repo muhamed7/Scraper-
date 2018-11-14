@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MedicalDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Chabter1_Tbl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodeRange_from" Type="nvarchar" MaxLength="150" />
+          <Property Name="CodeRange_To" Type="nvarchar" MaxLength="150" />
+          <Property Name="SectionDescription" Type="nvarchar" MaxLength="150" />
+          <Property Name="link_data" Type="nvarchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Diseases_destails_tbl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="500" />
+          <Property Name="Code" Type="nvarchar" MaxLength="500" />
+          <Property Name="Link_data" Type="nvarchar(max)" />
+          <Property Name="Diseases_fk" Type="int" />
+        </EntityType>
+        <EntityType Name="Diseases_Tbl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="500" />
+          <Property Name="Section_Fk" Type="int" />
+        </EntityType>
+        <EntityType Name="dises_Description_tbl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descraption" Type="nvarchar(max)" />
+          <Property Name="code_dec" Type="nvarchar" MaxLength="150" />
+          <Property Name="details_fk" Type="int" />
+          <Property Name="img" Type="nvarchar(max)" />
+          <Property Name="Specialty" Type="nvarchar" MaxLength="150" />
+          <Property Name="MeSH_Codes" Type="nvarchar" MaxLength="500" />
+          <Property Name="ICD9Codes" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Notes_Tbl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="Table_FK" Type="int" />
+          <Property Name="Fk_type" Type="int" />
+        </EntityType>
+        <EntityType Name="Section_Tbl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code_to" Type="nvarchar" MaxLength="150" />
+          <Property Name="Code_from" Type="nvarchar" MaxLength="150" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" />
+          <Property Name="Chabter1_fk" Type="int" />
+          <Property Name="link_data" Type="nvarchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_Diseases_destails_tbl_Diseases_Tbl">
+          <End Role="Diseases_Tbl" Type="Self.Diseases_Tbl" Multiplicity="0..1" />
+          <End Role="Diseases_destails_tbl" Type="Self.Diseases_destails_tbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Diseases_Tbl">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Diseases_destails_tbl">
+              <PropertyRef Name="Diseases_fk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Diseases_Tbl_Section_Tbl">
+          <End Role="Section_Tbl" Type="Self.Section_Tbl" Multiplicity="0..1" />
+          <End Role="Diseases_Tbl" Type="Self.Diseases_Tbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Section_Tbl">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Diseases_Tbl">
+              <PropertyRef Name="Section_Fk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dises_Description_tbl_Diseases_destails_tbl">
+          <End Role="Diseases_destails_tbl" Type="Self.Diseases_destails_tbl" Multiplicity="0..1" />
+          <End Role="dises_Description_tbl" Type="Self.dises_Description_tbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Diseases_destails_tbl">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="dises_Description_tbl">
+              <PropertyRef Name="details_fk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Section_Tbl_Chabter1_Tbl">
+          <End Role="Chabter1_Tbl" Type="Self.Chabter1_Tbl" Multiplicity="0..1" />
+          <End Role="Section_Tbl" Type="Self.Section_Tbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Chabter1_Tbl">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Section_Tbl">
+              <PropertyRef Name="Chabter1_fk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MedicalDBModelStoreContainer">
+          <EntitySet Name="Chabter1_Tbl" EntityType="Self.Chabter1_Tbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Diseases_destails_tbl" EntityType="Self.Diseases_destails_tbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Diseases_Tbl" EntityType="Self.Diseases_Tbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dises_Description_tbl" EntityType="Self.dises_Description_tbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Notes_Tbl" EntityType="Self.Notes_Tbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Section_Tbl" EntityType="Self.Section_Tbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Diseases_destails_tbl_Diseases_Tbl" Association="Self.FK_Diseases_destails_tbl_Diseases_Tbl">
+            <End Role="Diseases_Tbl" EntitySet="Diseases_Tbl" />
+            <End Role="Diseases_destails_tbl" EntitySet="Diseases_destails_tbl" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Diseases_Tbl_Section_Tbl" Association="Self.FK_Diseases_Tbl_Section_Tbl">
+            <End Role="Section_Tbl" EntitySet="Section_Tbl" />
+            <End Role="Diseases_Tbl" EntitySet="Diseases_Tbl" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dises_Description_tbl_Diseases_destails_tbl" Association="Self.FK_dises_Description_tbl_Diseases_destails_tbl">
+            <End Role="Diseases_destails_tbl" EntitySet="Diseases_destails_tbl" />
+            <End Role="dises_Description_tbl" EntitySet="dises_Description_tbl" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Section_Tbl_Chabter1_Tbl" Association="Self.FK_Section_Tbl_Chabter1_Tbl">
+            <End Role="Chabter1_Tbl" EntitySet="Chabter1_Tbl" />
+            <End Role="Section_Tbl" EntitySet="Section_Tbl" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MedicalDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="MedicalDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Chabter1_Tbl" EntityType="MedicalDBModel.Chabter1_Tbl" />
+          <EntitySet Name="Diseases_destails_tbl" EntityType="MedicalDBModel.Diseases_destails_tbl" />
+          <EntitySet Name="Diseases_Tbl" EntityType="MedicalDBModel.Diseases_Tbl" />
+          <EntitySet Name="dises_Description_tbl" EntityType="MedicalDBModel.dises_Description_tbl" />
+          <EntitySet Name="Notes_Tbl" EntityType="MedicalDBModel.Notes_Tbl" />
+          <EntitySet Name="Section_Tbl" EntityType="MedicalDBModel.Section_Tbl" />
+          <EntitySet Name="sysdiagrams" EntityType="MedicalDBModel.sysdiagram" />
+          <AssociationSet Name="FK_Section_Tbl_Chabter1_Tbl" Association="MedicalDBModel.FK_Section_Tbl_Chabter1_Tbl">
+            <End Role="Chabter1_Tbl" EntitySet="Chabter1_Tbl" />
+            <End Role="Section_Tbl" EntitySet="Section_Tbl" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Diseases_destails_tbl_Diseases_Tbl" Association="MedicalDBModel.FK_Diseases_destails_tbl_Diseases_Tbl">
+            <End Role="Diseases_Tbl" EntitySet="Diseases_Tbl" />
+            <End Role="Diseases_destails_tbl" EntitySet="Diseases_destails_tbl" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dises_Description_tbl_Diseases_destails_tbl" Association="MedicalDBModel.FK_dises_Description_tbl_Diseases_destails_tbl">
+            <End Role="Diseases_destails_tbl" EntitySet="Diseases_destails_tbl" />
+            <End Role="dises_Description_tbl" EntitySet="dises_Description_tbl" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Diseases_Tbl_Section_Tbl" Association="MedicalDBModel.FK_Diseases_Tbl_Section_Tbl">
+            <End Role="Section_Tbl" EntitySet="Section_Tbl" />
+            <End Role="Diseases_Tbl" EntitySet="Diseases_Tbl" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Chabter1_Tbl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodeRange_from" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="CodeRange_To" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="SectionDescription" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="link_data" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Section_Tbl" Relationship="MedicalDBModel.FK_Section_Tbl_Chabter1_Tbl" FromRole="Chabter1_Tbl" ToRole="Section_Tbl" />
+        </EntityType>
+        <EntityType Name="Diseases_destails_tbl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Link_data" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Diseases_fk" Type="Int32" />
+          <NavigationProperty Name="Diseases_Tbl" Relationship="MedicalDBModel.FK_Diseases_destails_tbl_Diseases_Tbl" FromRole="Diseases_destails_tbl" ToRole="Diseases_Tbl" />
+          <NavigationProperty Name="dises_Description_tbl" Relationship="MedicalDBModel.FK_dises_Description_tbl_Diseases_destails_tbl" FromRole="Diseases_destails_tbl" ToRole="dises_Description_tbl" />
+        </EntityType>
+        <EntityType Name="Diseases_Tbl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Section_Fk" Type="Int32" />
+          <NavigationProperty Name="Diseases_destails_tbl" Relationship="MedicalDBModel.FK_Diseases_destails_tbl_Diseases_Tbl" FromRole="Diseases_Tbl" ToRole="Diseases_destails_tbl" />
+          <NavigationProperty Name="Section_Tbl" Relationship="MedicalDBModel.FK_Diseases_Tbl_Section_Tbl" FromRole="Diseases_Tbl" ToRole="Section_Tbl" />
+        </EntityType>
+        <EntityType Name="dises_Description_tbl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descraption" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="code_dec" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="details_fk" Type="Int32" />
+          <Property Name="img" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Specialty" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="MeSH_Codes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ICD9Codes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Diseases_destails_tbl" Relationship="MedicalDBModel.FK_dises_Description_tbl_Diseases_destails_tbl" FromRole="dises_Description_tbl" ToRole="Diseases_destails_tbl" />
+        </EntityType>
+        <EntityType Name="Notes_Tbl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Table_FK" Type="Int32" />
+          <Property Name="Fk_type" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Section_Tbl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code_to" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Code_from" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Chabter1_fk" Type="Int32" />
+          <Property Name="link_data" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Chabter1_Tbl" Relationship="MedicalDBModel.FK_Section_Tbl_Chabter1_Tbl" FromRole="Section_Tbl" ToRole="Chabter1_Tbl" />
+          <NavigationProperty Name="Diseases_Tbl" Relationship="MedicalDBModel.FK_Diseases_Tbl_Section_Tbl" FromRole="Section_Tbl" ToRole="Diseases_Tbl" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_Section_Tbl_Chabter1_Tbl">
+          <End Type="MedicalDBModel.Chabter1_Tbl" Role="Chabter1_Tbl" Multiplicity="0..1" />
+          <End Type="MedicalDBModel.Section_Tbl" Role="Section_Tbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Chabter1_Tbl">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Section_Tbl">
+              <PropertyRef Name="Chabter1_fk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Diseases_destails_tbl_Diseases_Tbl">
+          <End Type="MedicalDBModel.Diseases_Tbl" Role="Diseases_Tbl" Multiplicity="0..1" />
+          <End Type="MedicalDBModel.Diseases_destails_tbl" Role="Diseases_destails_tbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Diseases_Tbl">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Diseases_destails_tbl">
+              <PropertyRef Name="Diseases_fk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dises_Description_tbl_Diseases_destails_tbl">
+          <End Type="MedicalDBModel.Diseases_destails_tbl" Role="Diseases_destails_tbl" Multiplicity="0..1" />
+          <End Type="MedicalDBModel.dises_Description_tbl" Role="dises_Description_tbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Diseases_destails_tbl">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="dises_Description_tbl">
+              <PropertyRef Name="details_fk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Diseases_Tbl_Section_Tbl">
+          <End Type="MedicalDBModel.Section_Tbl" Role="Section_Tbl" Multiplicity="0..1" />
+          <End Type="MedicalDBModel.Diseases_Tbl" Role="Diseases_Tbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Section_Tbl">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Diseases_Tbl">
+              <PropertyRef Name="Section_Fk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MedicalDBModelStoreContainer" CdmEntityContainer="MedicalDBEntities">
+          <EntitySetMapping Name="Chabter1_Tbl">
+            <EntityTypeMapping TypeName="MedicalDBModel.Chabter1_Tbl">
+              <MappingFragment StoreEntitySet="Chabter1_Tbl">
+                <ScalarProperty Name="link_data" ColumnName="link_data" />
+                <ScalarProperty Name="SectionDescription" ColumnName="SectionDescription" />
+                <ScalarProperty Name="CodeRange_To" ColumnName="CodeRange_To" />
+                <ScalarProperty Name="CodeRange_from" ColumnName="CodeRange_from" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Diseases_destails_tbl">
+            <EntityTypeMapping TypeName="MedicalDBModel.Diseases_destails_tbl">
+              <MappingFragment StoreEntitySet="Diseases_destails_tbl">
+                <ScalarProperty Name="Diseases_fk" ColumnName="Diseases_fk" />
+                <ScalarProperty Name="Link_data" ColumnName="Link_data" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Diseases_Tbl">
+            <EntityTypeMapping TypeName="MedicalDBModel.Diseases_Tbl">
+              <MappingFragment StoreEntitySet="Diseases_Tbl">
+                <ScalarProperty Name="Section_Fk" ColumnName="Section_Fk" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dises_Description_tbl">
+            <EntityTypeMapping TypeName="MedicalDBModel.dises_Description_tbl">
+              <MappingFragment StoreEntitySet="dises_Description_tbl">
+                <ScalarProperty Name="ICD9Codes" ColumnName="ICD9Codes" />
+                <ScalarProperty Name="MeSH_Codes" ColumnName="MeSH_Codes" />
+                <ScalarProperty Name="Specialty" ColumnName="Specialty" />
+                <ScalarProperty Name="img" ColumnName="img" />
+                <ScalarProperty Name="details_fk" ColumnName="details_fk" />
+                <ScalarProperty Name="code_dec" ColumnName="code_dec" />
+                <ScalarProperty Name="Descraption" ColumnName="Descraption" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Notes_Tbl">
+            <EntityTypeMapping TypeName="MedicalDBModel.Notes_Tbl">
+              <MappingFragment StoreEntitySet="Notes_Tbl">
+                <ScalarProperty Name="Fk_type" ColumnName="Fk_type" />
+                <ScalarProperty Name="Table_FK" ColumnName="Table_FK" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Section_Tbl">
+            <EntityTypeMapping TypeName="MedicalDBModel.Section_Tbl">
+              <MappingFragment StoreEntitySet="Section_Tbl">
+                <ScalarProperty Name="link_data" ColumnName="link_data" />
+                <ScalarProperty Name="Chabter1_fk" ColumnName="Chabter1_fk" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code_from" ColumnName="Code_from" />
+                <ScalarProperty Name="Code_to" ColumnName="Code_to" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="MedicalDBModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

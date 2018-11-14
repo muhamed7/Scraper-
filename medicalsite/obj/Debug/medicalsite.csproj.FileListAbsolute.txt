@@ -1,0 +1,108 @@
+c:\users\user3\source\repos\medicalsite\medicalsite\bin\Debug\medicalsite.exe.config
+c:\users\user3\source\repos\medicalsite\medicalsite\bin\Debug\medicalsite.exe
+c:\users\user3\source\repos\medicalsite\medicalsite\bin\Debug\medicalsite.pdb
+c:\users\user3\source\repos\medicalsite\medicalsite\obj\Debug\medicalsite.csprojAssemblyReference.cache
+c:\users\user3\source\repos\medicalsite\medicalsite\obj\Debug\medicalsite.Form1.resources
+c:\users\user3\source\repos\medicalsite\medicalsite\obj\Debug\medicalsite.Properties.Resources.resources
+c:\users\user3\source\repos\medicalsite\medicalsite\obj\Debug\medicalsite.csproj.GenerateResource.cache
+c:\users\user3\source\repos\medicalsite\medicalsite\obj\Debug\medicalsite.csproj.CoreCompileInputs.cache
+c:\users\user3\source\repos\medicalsite\medicalsite\obj\Debug\medicalsite.exe
+c:\users\user3\source\repos\medicalsite\medicalsite\obj\Debug\medicalsite.pdb
+c:\users\user3\source\repos\medicalsite\medicalsite\bin\Debug\HtmlAgilityPack.dll
+c:\users\user3\source\repos\medicalsite\medicalsite\bin\Debug\HtmlAgilityPack.pdb
+c:\users\user3\source\repos\medicalsite\medicalsite\bin\Debug\HtmlAgilityPack.xml
+c:\users\user3\source\repos\medicalsite\medicalsite\obj\Debug\medicalsite.csproj.CopyComplete
+c:\users\user3\source\repos\medicalsite\medicalsite\bin\Debug\EntityFramework.dll
+c:\users\user3\source\repos\medicalsite\medicalsite\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\user3\source\repos\medicalsite\medicalsite\bin\Debug\EntityFramework.xml
+c:\users\user3\source\repos\medicalsite\medicalsite\bin\Debug\EntityFramework.SqlServer.xml
+D:\AMYFIRSTWEBSITE\SCRAPMEDICAL\medicalsite\medicalsite\bin\Debug\medicalsite.exe.config
+D:\AMYFIRSTWEBSITE\SCRAPMEDICAL\medicalsite\medicalsite\bin\Debug\medicalsite.exe
+D:\AMYFIRSTWEBSITE\SCRAPMEDICAL\medicalsite\medicalsite\bin\Debug\medicalsite.pdb
+D:\AMYFIRSTWEBSITE\SCRAPMEDICAL\medicalsite\medicalsite\bin\Debug\EntityFramework.dll
+D:\AMYFIRSTWEBSITE\SCRAPMEDICAL\medicalsite\medicalsite\bin\Debug\EntityFramework.SqlServer.dll
+D:\AMYFIRSTWEBSITE\SCRAPMEDICAL\medicalsite\medicalsite\bin\Debug\EntityFramework.xml
+D:\AMYFIRSTWEBSITE\SCRAPMEDICAL\medicalsite\medicalsite\bin\Debug\EntityFramework.SqlServer.xml
+D:\AMYFIRSTWEBSITE\SCRAPMEDICAL\medicalsite\medicalsite\bin\Debug\HtmlAgilityPack.pdb
+D:\AMYFIRSTWEBSITE\SCRAPMEDICAL\medicalsite\medicalsite\bin\Debug\HtmlAgilityPack.xml
+D:\AMYFIRSTWEBSITE\SCRAPMEDICAL\medicalsite\medicalsite\obj\Debug\medicalsite.csprojResolveAssemblyReference.cache
+D:\AMYFIRSTWEBSITE\SCRAPMEDICAL\medicalsite\medicalsite\obj\Debug\medicalsite.Form1.resources
+D:\AMYFIRSTWEBSITE\SCRAPMEDICAL\medicalsite\medicalsite\obj\Debug\medicalsite.Properties.Resources.resources
+D:\AMYFIRSTWEBSITE\SCRAPMEDICAL\medicalsite\medicalsite\obj\Debug\medicalsite.csproj.GenerateResource.cache
+D:\AMYFIRSTWEBSITE\SCRAPMEDICAL\medicalsite\medicalsite\obj\Debug\medicalsite.csproj.CoreCompileInputs.cache
+D:\AMYFIRSTWEBSITE\SCRAPMEDICAL\medicalsite\medicalsite\obj\Debug\medicalsite.csproj.CopyComplete
+D:\AMYFIRSTWEBSITE\SCRAPMEDICAL\medicalsite\medicalsite\obj\Debug\medicalsite.exe
+D:\AMYFIRSTWEBSITE\SCRAPMEDICAL\medicalsite\medicalsite\obj\Debug\medicalsite.pdb
+D:\medicalsite.up\medicalsite\obj\Debug\medicalsite.csprojAssemblyReference.cache
+D:\medicalsite.up\medicalsite\obj\Debug\medicalsite.Form1.resources
+D:\medicalsite.up\medicalsite\obj\Debug\medicalsite.Properties.Resources.resources
+D:\medicalsite.up\medicalsite\obj\Debug\medicalsite.csproj.GenerateResource.cache
+D:\medicalsite.up\medicalsite\obj\Debug\medicalsite.csproj.CoreCompileInputs.cache
+D:\medicalsite.up\medicalsite\obj\Debug\medicalsite.exe
+D:\medicalsite.up\medicalsite\obj\Debug\medicalsite.pdb
+D:\medicalsite.up\medicalsite\bin\Debug\medicalsite.exe.config
+D:\medicalsite.up\medicalsite\bin\Debug\medicalsite.exe
+D:\medicalsite.up\medicalsite\bin\Debug\medicalsite.pdb
+D:\medicalsite.up\medicalsite\bin\Debug\EntityFramework.dll
+D:\medicalsite.up\medicalsite\bin\Debug\EntityFramework.SqlServer.dll
+D:\medicalsite.up\medicalsite\bin\Debug\HtmlAgilityPack.dll
+D:\medicalsite.up\medicalsite\bin\Debug\EntityFramework.xml
+D:\medicalsite.up\medicalsite\bin\Debug\EntityFramework.SqlServer.xml
+D:\medicalsite.up\medicalsite\bin\Debug\HtmlAgilityPack.pdb
+D:\medicalsite.up\medicalsite\bin\Debug\HtmlAgilityPack.xml
+D:\medicalsite.up\medicalsite\obj\Debug\medicalsite.csproj.CopyComplete
+E:\Dtatbase\New folder\medicalsite.up\medicalsite\obj\Debug\medicalsite.csprojAssemblyReference.cache
+E:\Dtatbase\New folder\medicalsite.up\medicalsite\obj\Debug\medicalsite.Form1.resources
+E:\Dtatbase\New folder\medicalsite.up\medicalsite\obj\Debug\medicalsite.Properties.Resources.resources
+E:\Dtatbase\New folder\medicalsite.up\medicalsite\obj\Debug\medicalsite.csproj.GenerateResource.cache
+E:\Dtatbase\New folder\medicalsite.up\medicalsite\obj\Debug\medicalsite.csproj.CoreCompileInputs.cache
+E:\Dtatbase\New folder\medicalsite.up\medicalsite\obj\Debug\medicalsite.exe
+E:\Dtatbase\New folder\medicalsite.up\medicalsite\obj\Debug\medicalsite.pdb
+E:\Dtatbase\New folder\medicalsite.up\medicalsite\bin\Debug\medicalsite.exe.config
+E:\Dtatbase\New folder\medicalsite.up\medicalsite\bin\Debug\medicalsite.exe
+E:\Dtatbase\New folder\medicalsite.up\medicalsite\bin\Debug\medicalsite.pdb
+E:\Dtatbase\New folder\medicalsite.up\medicalsite\bin\Debug\EntityFramework.dll
+E:\Dtatbase\New folder\medicalsite.up\medicalsite\bin\Debug\EntityFramework.SqlServer.dll
+E:\Dtatbase\New folder\medicalsite.up\medicalsite\bin\Debug\EntityFramework.xml
+E:\Dtatbase\New folder\medicalsite.up\medicalsite\bin\Debug\EntityFramework.SqlServer.xml
+E:\Dtatbase\New folder\medicalsite.up\medicalsite\bin\Debug\HtmlAgilityPack.pdb
+E:\Dtatbase\New folder\medicalsite.up\medicalsite\bin\Debug\HtmlAgilityPack.xml
+E:\Dtatbase\New folder\medicalsite.up\medicalsite\obj\Debug\medicalsite.csproj.CopyComplete
+E:\Dtatbase\new_update\medicalsite.upnew\medicalsite\bin\Debug\medicalsite.exe.config
+E:\Dtatbase\new_update\medicalsite.upnew\medicalsite\bin\Debug\medicalsite.exe
+E:\Dtatbase\new_update\medicalsite.upnew\medicalsite\bin\Debug\medicalsite.pdb
+E:\Dtatbase\new_update\medicalsite.upnew\medicalsite\bin\Debug\EntityFramework.dll
+E:\Dtatbase\new_update\medicalsite.upnew\medicalsite\bin\Debug\EntityFramework.SqlServer.dll
+E:\Dtatbase\new_update\medicalsite.upnew\medicalsite\bin\Debug\EntityFramework.xml
+E:\Dtatbase\new_update\medicalsite.upnew\medicalsite\bin\Debug\EntityFramework.SqlServer.xml
+E:\Dtatbase\new_update\medicalsite.upnew\medicalsite\bin\Debug\HtmlAgilityPack.pdb
+E:\Dtatbase\new_update\medicalsite.upnew\medicalsite\bin\Debug\HtmlAgilityPack.xml
+E:\Dtatbase\new_update\medicalsite.upnew\medicalsite\obj\Debug\medicalsite.csprojAssemblyReference.cache
+E:\Dtatbase\new_update\medicalsite.upnew\medicalsite\obj\Debug\medicalsite.Form1.resources
+E:\Dtatbase\new_update\medicalsite.upnew\medicalsite\obj\Debug\medicalsite.Properties.Resources.resources
+E:\Dtatbase\new_update\medicalsite.upnew\medicalsite\obj\Debug\medicalsite.csproj.GenerateResource.cache
+E:\Dtatbase\new_update\medicalsite.upnew\medicalsite\obj\Debug\medicalsite.csproj.CoreCompileInputs.cache
+E:\Dtatbase\new_update\medicalsite.upnew\medicalsite\obj\Debug\medicalsite.csproj.CopyComplete
+E:\Dtatbase\new_update\medicalsite.upnew\medicalsite\obj\Debug\medicalsite.exe
+E:\Dtatbase\new_update\medicalsite.upnew\medicalsite\obj\Debug\medicalsite.pdb
+D:\AMYFIRSTWEBSITE\nanohealthsuite\medicalsite.upnew\medicalsite.upnew\medicalsite.upnew\medicalsite\bin\Debug\medicalsite.exe.config
+D:\AMYFIRSTWEBSITE\nanohealthsuite\medicalsite.upnew\medicalsite.upnew\medicalsite.upnew\medicalsite\bin\Debug\medicalsite.exe
+D:\AMYFIRSTWEBSITE\nanohealthsuite\medicalsite.upnew\medicalsite.upnew\medicalsite.upnew\medicalsite\bin\Debug\medicalsite.pdb
+D:\AMYFIRSTWEBSITE\nanohealthsuite\medicalsite.upnew\medicalsite.upnew\medicalsite.upnew\medicalsite\bin\Debug\EntityFramework.dll
+D:\AMYFIRSTWEBSITE\nanohealthsuite\medicalsite.upnew\medicalsite.upnew\medicalsite.upnew\medicalsite\bin\Debug\EntityFramework.SqlServer.dll
+D:\AMYFIRSTWEBSITE\nanohealthsuite\medicalsite.upnew\medicalsite.upnew\medicalsite.upnew\medicalsite\bin\Debug\EntityFramework.xml
+D:\AMYFIRSTWEBSITE\nanohealthsuite\medicalsite.upnew\medicalsite.upnew\medicalsite.upnew\medicalsite\bin\Debug\EntityFramework.SqlServer.xml
+D:\AMYFIRSTWEBSITE\nanohealthsuite\medicalsite.upnew\medicalsite.upnew\medicalsite.upnew\medicalsite\bin\Debug\HtmlAgilityPack.pdb
+D:\AMYFIRSTWEBSITE\nanohealthsuite\medicalsite.upnew\medicalsite.upnew\medicalsite.upnew\medicalsite\bin\Debug\HtmlAgilityPack.xml
+D:\AMYFIRSTWEBSITE\nanohealthsuite\medicalsite.upnew\medicalsite.upnew\medicalsite.upnew\medicalsite\obj\Debug\medicalsite.csprojResolveAssemblyReference.cache
+D:\AMYFIRSTWEBSITE\nanohealthsuite\medicalsite.upnew\medicalsite.upnew\medicalsite.upnew\medicalsite\obj\Debug\medicalsite.Form1.resources
+D:\AMYFIRSTWEBSITE\nanohealthsuite\medicalsite.upnew\medicalsite.upnew\medicalsite.upnew\medicalsite\obj\Debug\medicalsite.Properties.Resources.resources
+D:\AMYFIRSTWEBSITE\nanohealthsuite\medicalsite.upnew\medicalsite.upnew\medicalsite.upnew\medicalsite\obj\Debug\medicalsite.csproj.GenerateResource.cache
+D:\AMYFIRSTWEBSITE\nanohealthsuite\medicalsite.upnew\medicalsite.upnew\medicalsite.upnew\medicalsite\obj\Debug\medicalsite.csproj.CoreCompileInputs.cache
+D:\AMYFIRSTWEBSITE\nanohealthsuite\medicalsite.upnew\medicalsite.upnew\medicalsite.upnew\medicalsite\obj\Debug\medicalsite.csproj.CopyComplete
+D:\AMYFIRSTWEBSITE\nanohealthsuite\medicalsite.upnew\medicalsite.upnew\medicalsite.upnew\medicalsite\obj\Debug\medicalsite.exe
+D:\AMYFIRSTWEBSITE\nanohealthsuite\medicalsite.upnew\medicalsite.upnew\medicalsite.upnew\medicalsite\obj\Debug\medicalsite.pdb
+D:\AMYFIRSTWEBSITE\nanohealthsuite\medicalsite.upnew\medicalsite.upnew\medicalsite.upnew\medicalsite\bin\Debug\medicalsite.exe.manifest
+D:\AMYFIRSTWEBSITE\nanohealthsuite\medicalsite.upnew\medicalsite.upnew\medicalsite.upnew\medicalsite\bin\Debug\medicalsite.application
+D:\AMYFIRSTWEBSITE\nanohealthsuite\medicalsite.upnew\medicalsite.upnew\medicalsite.upnew\medicalsite\obj\Debug\medicalsite.exe.manifest
+D:\AMYFIRSTWEBSITE\nanohealthsuite\medicalsite.upnew\medicalsite.upnew\medicalsite.upnew\medicalsite\obj\Debug\medicalsite.application
